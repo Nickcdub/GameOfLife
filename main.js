@@ -6,7 +6,7 @@ ASSET_MANAGER.downloadAll(() => {
 	const canvas = document.getElementById("gameWorld");
 	const ctx = canvas.getContext("2d");
 
-	gameEngine.addEntity(new GameOfLife(1024,768,5,1));
+	gameEngine.addEntity(new GameOfLife(1024,768,5,30));
 	gameEngine.init(ctx);
 
 	gameEngine.start();

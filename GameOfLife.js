@@ -14,10 +14,6 @@ class GameOfLife {
             this.rows.push(columns);
 
         }
-        this.rows[0][0] = 0;
-        this.rows[1][0] = 1;
-        this.rows[1][1] = 0;
-        this.rows[0][1] = 0;
     }
 
     update(){

@@ -14,6 +14,10 @@ class GameOfLife {
             this.rows.push(columns);
 
         }
+        this.rows[0][0] = 0;
+        this.rows[1][0] = 1;
+        this.rows[1][1] = 0;
+        this.rows[0][1] = 0;
     }
 
     update(){
@@ -22,10 +26,12 @@ class GameOfLife {
             let columns = [];
             for(let j = 0; j < this.colSteps; j++ ){
                 let neighbors = this.countNeighbors(i,j);
-                if(neighbors == 3) columns.push(1);
+                if(this.rows[i][j] == 1 && (neighbors == 3 || neighbors == 2)) columns.push(1);
+                else if(this.rows[i][j] == 0 && neighbors == 3) columns.push(1);
+                /*if(neighbors == 3) columns.push(1);
                 else if(this.rows[i][j] == 1 && neighbors == 2){
                     columns.push(1);
-                }
+                }*/
                 else(columns.push(0));
             }
             temp.push(columns);
@@ -48,7 +54,7 @@ class GameOfLife {
             [0, -1],           [0, 1],
             [1, -1],  [1, 0],  [1, 1]
           ];
-          let count = 1;
+          let count = 0;
           let rowCount = this.rows.length;
           let colCount = this.rows[0].length;
 

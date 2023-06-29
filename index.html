@@ -14,5 +14,21 @@
 </head>
 <body>
     <canvas id="gameWorld" width="1024" height="768" style="background: black; border: 1px solid black" tabindex="0" autofocus></canvas>
+    <size style="position: absolute; top: 100px; right: 10px;">
+        <p style="margin-bottom: 10px; text-align: right;">Selected value: <span id="sizeValue">14</span></p>
+        <label for="Size" style="text-align: right;">Cell Size:</label>
+        <input type="range" id="Size" name="Size" min="1" max="30" step="1">
+      </size>
+    
+      <density style="position: absolute; top: 250px; right: 10px;">
+        <p style="margin-bottom: 10px; text-align: right;">Selected value: <span id="densityValue">40</span></p>
+        <label for="Density" style="text-align: right;">Density:</label>
+        <input type="range" id="Density" name="Density" min="10" max="90" step="1">
+    </density>
+
+    <button id="Rerun" style="position: absolute; top: 350px; right: 10px;">Run Again</button>
+    <button id="Rainbow" style="position: absolute; top: 375px; right: 10px;">Toggle Rainbow</button>
+
+    
 </body>
 </html>
